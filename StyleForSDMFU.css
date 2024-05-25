@@ -81,7 +81,7 @@ title{
 }
 
 #backgroundphoto{
-    background-image: url("/photos/firefighterInSmoke.jpg");
+    background-image: url("photos/firefighterInSmoke.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
