@@ -107,7 +107,7 @@ title{
     text-align: center;
     box-sizing: border-box;
     align-items: center;
-
+    width: 100%;
 }
 @media (max-width: 900px) {
     .hiringInformation{
@@ -116,10 +116,12 @@ title{
     }
     #hiringVideo{
         width: 100%;
-
+    }
+    #hiringVideo iframe{
+        width: 100%;
     }
     #hiringSalaries{
-        width: auto;
+        width: 100%;
         margin: 10px auto;
         text-align: center;
     }
@@ -158,7 +160,7 @@ title{
 .aboutus{
     width: 90%;
     margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 1vw;
     background-color: white; /*was ff4740*/
     color: #333;
 }
