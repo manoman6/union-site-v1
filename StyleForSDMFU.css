@@ -33,11 +33,21 @@ title{
 
 .navbar-links li {
     padding: 15px 20px;
+    /*added for hover effect*/
+    transition: transform 0.3s ease; /*smooth transition for scaling*/
 }
 
 .navbar-links a {
     text-decoration: none;
     color: white;
+    transition: color 0.3s ease; /*smooth color for transition*/
+}
+
+/*added for hover effect*/
+/* Hover effects for list items and links */
+.navbar-links li:hover, .navbar-links a:hover {
+    transform: scale(1.1); /* Makes the text bigger */
+    color: #FF2E01; /* Changes the text color */
 }
 
 .toggle-button {
@@ -79,9 +89,46 @@ title{
         display: flex;
     }
 }
+#introParagraph {
+    color: #333333; /* Dark gray text color for high contrast on white background */
+    font-size: 2em; /* Large text size for better visibility */
+    font-weight: bold; /* Bold font to make the text prominent */
+    text-align: center; /* Centers the text horizontally */
+    margin: 30px auto; /* Margin to center the paragraph and provide vertical spacing */
+    padding: 20px 0; /*padding to provide space for lines*/
+    position: relative ;
+    transition: all 0.3s ease; /* Smooth transition for shadow changes */
+}
+
+#introParagraph:before,
+#introParagraph:after {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Absolute positioning relative to the paragraph */
+    left: 0; /* Aligning to the far left */
+    right: 0; /* Aligning to the far right */
+    height: 1px; /* Thin line */
+    background-color: #ff0000; /* Red color for the lines */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+}
+#introParagraph:before {
+    top: 0; /*position line at top of paragraph*/
+}
+#introParagraph:after{
+    bottom: 0; /*position line at bottom of paragraph*/
+}
+
+#introParagraph:hover:before,
+#introParagraph:hover:after {
+    background-color: #ff6347;
+}
+
+
+#introParagraph:hover{
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+}
 
 #backgroundphoto{
-    background-image: url("photos/firefighterInSmoke.jpg");
+    background-image: url("compressedPhotos/firefighterInSmoke Large.jpeg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -296,7 +343,7 @@ header {
     grid-template-rows: 250px;
     gap: 10px;
     width: 90%;
-    margin: auto;
+    margin: 20px auto;
 }
 
 .Gallery img{
@@ -319,6 +366,7 @@ header {
 }
 .president{
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 .vp-treasurer {
     display: flex;
@@ -364,6 +412,16 @@ header {
 
 .peerSupportTitle{
     color: #5C5C5C;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.PeerSupportMembers img{
+    height: auto;
+    width: auto;
+    max-width: 125px;
+    max-height: 150px;
+    border-radius: 10%;
 }
 
 .horizontal-list {
