@@ -89,16 +89,37 @@ title{
 }
 #backgroundphotoH1{
     color: #FF2E01;
+    padding-top: 20px;
 
     text-shadow:
             -1px -1px 0 black,
             1px -1px 0 black,
             -1px 1px 0 black,
             1px 1px 0 black;
-
-
 }
 
+.event-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    gap: 20px; /* Spacing between grid items */
+}
+
+.event img {
+    width: 100%; /* Make the image responsive */
+    height: auto ; /* Maintain aspect ratio was auto*/
+    border-radius: 40px;
+}
+
+.event p {
+    padding: 10px; /* Padding around the text for better readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+    .event-grid {
+        grid-template-columns: 1fr; /* Stack the grid items on top of each other on small screens */
+    }
+}
 
 .hiringInformation{
     background-color: white;/*was ff4740 */
@@ -197,7 +218,7 @@ header {
 
 /* Main Content Styles */
 .main-content {
-    padding: 50px 0;
+    padding: 0px 0;
     text-align: center;
     min-height: 100%;
     margin-bottom: -50px;
