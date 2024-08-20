@@ -127,6 +127,7 @@ title{
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for a dynamic effect */
 }
 
+
 #backgroundphoto{
     background-image: url("compressedPhotos/firefighterInSmoke Large.jpeg");
     background-position: center;
@@ -145,15 +146,19 @@ title{
             1px 1px 0 black;
 }
 
+
+
 .event-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
-    gap: 20px; /* Spacing between grid items */
+    gap: 20px;  /*Spacing between grid items */
+
 }
 
 .event img {
     width: 100%; /* Make the image responsive */
     height: auto ; /* Maintain aspect ratio was auto*/
+    object-fit: cover;
     border-radius: 40px;
 }
 
@@ -165,6 +170,10 @@ title{
 @media (max-width: 900px) {
     .event-grid {
         grid-template-columns: 1fr; /* Stack the grid items on top of each other on small screens */
+    }
+
+    .event img {
+        max-height: none;
     }
 }
 
@@ -285,6 +294,9 @@ header {
     text-align: center;
     line-height: 50px;
 }
+footer p {
+    background-color: #3b3b3b;
+}
 
 .navbar-footer{
     background-color: #3b3b3b; /* Dark background for the navbar */
@@ -304,14 +316,28 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
+
 }
 
-.navbar-footer li{
+.navbar-footer li {
     padding: 14px 16px;
+}
+.navbar-footer img {
+    height: auto;
+    width: auto;
+    max-height: 2em;
+    max-width: 2em;
+}
+
+@media (max-width: 768px) {
+    .navbar-footer li {
+        flex: 1 1 100%;
+        height: auto;
+    }
 }
 
 .navbar-footer a:hover{
-    background-color: #ff4740;
+    /*background-color: #ff4740;*/
     color: navajowhite;
 }
 
