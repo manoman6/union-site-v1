@@ -142,7 +142,6 @@ footer p {
     padding: 0;
     display: flex;
     align-items: center;
-
 }
 
 .navbar-footer li {
@@ -219,7 +218,7 @@ footer p {
         font-size: larger;
     }
     .logo img {
-        width: 50px;
+        width: 50px; /*fixme: make logo bigger, maybe 60px?*/
     }
 }
 
@@ -343,6 +342,9 @@ footer p {
     background-color: white; /*was ff4740*/
     color: #333;
 }
+.aboutus h1 {
+    padding-top: 20px;
+}
 
 /*================================================================================================*/
 /*end of About Us section*/
@@ -356,6 +358,10 @@ footer p {
     color: #5C5C5C;
     margin-right: 20px;
     margin-left: 20px;
+}
+
+.peerSupportTitle h1 {
+    padding-top: 20px;
 }
 
 .PeerSupportMembers h3 {
