@@ -248,6 +248,7 @@ footer p {
     background-size: cover;
     position: relative;
     border-radius: 5px;
+    min-height: 650px;
 }
 
 #introParagraph {
@@ -334,7 +335,7 @@ footer p {
     border-radius: 10px; /* Optional: Rounded corners */
     /*display: inline-block; !* Ensures the box wraps the content tightly *!*/
     /*margin-top: 20px;*/
-    margin: 2vw 7vw;
+    margin: 2vw 2vw;
     /*text-decoration: underline overline #8f7e6a;*/
     /*text-decoration-thickness: 5px ;*/
     border-bottom: 5px solid #8f7e6a;
@@ -355,15 +356,16 @@ footer p {
 
 #mini-gallery-title h1 {
      color: #ffe1b4;
+    /*color: navajowhite;*/
     /*background-color: rgba(0, 0, 0, 0.1); !* Transparent gray background *!*/
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, 0) 100%);
     /*color: white; !* Text color *!*/
     /*padding: 20px; !* Padding inside the box *!*/
     text-align: center; /* Center the text */
     border-radius: 10px; /* Optional: Rounded corners */
-    display: inline-block; /* Ensures the box wraps the content tightly */
+    /*display: inline-block; !* Ensures the box wraps the content tightly *!*/
     /*margin-top: 20px;*/
-    margin: 2vw 7vw;
+    margin: 2vw 2vw;
 
     border-bottom: 5px solid #8f7e6a;
     border-top: 5px solid #8f7e6a;
