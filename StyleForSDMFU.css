@@ -439,6 +439,10 @@ footer p {
     #introParagraph {
         font-size: large;
     }
+
+    #backgroundphotoh1 {
+        font-size: large;
+    }
 }
 
 /*================================================================================================*/
@@ -661,6 +665,9 @@ footer p {
     margin: 10px;
     color: #5C5C5C;
 }
+#hiringVideo h2 {
+    color: black;
+}
 
 /*original*/
 #hiringSalaries img {
@@ -682,7 +689,7 @@ footer p {
 #hiringSalaries h2{
     text-align: center;
     margin-top: 0;
-    color: #5C5C5C;
+    color: black;
 }
 
 /*original*/
