@@ -257,7 +257,7 @@ footer p {
     font-size: 2em; /* Large text size for better visibility */
     font-weight: bold; /* Bold font to make the text prominent */
     text-align: center; /* Centers the text horizontally */
-    margin: 30px 3vw; /* Margin to center the paragraph and provide vertical spacing */
+    margin: 30px 7vw; /* Margin to center the paragraph and provide vertical spacing */
     /*padding: 20px 0; !*padding to provide space for lines*!*/
     position: relative ;
     transition: all 0.3s ease; /* Smooth transition for shadow changes */
@@ -267,6 +267,7 @@ footer p {
     /*text-align: center; !* Center the text *!*/
     border-radius: 10px; /* Optional: Rounded corners */
     display: inline-block; /* Ensures the box wraps the content tightly */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 #introParagraph:before,
@@ -295,7 +296,7 @@ footer p {
 
 
 #introParagraph:hover {
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+    text-shadow: 4px 4px 8px rgba(94, 84, 35, 0.7); /* Enhanced shadow on hover for a dynamic effect */
 }
 
 #backgroundphoto {
@@ -323,7 +324,13 @@ footer p {
     border-radius: 10px; /* Optional: Rounded corners */
     display: inline-block; /* Ensures the box wraps the content tightly */
     /*margin-top: 20px;*/
-    margin: 20px 7vw;
+    margin: 20px 12vw;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+#backgroundphotoH1:hover{
+    text-shadow: 4px 4px 8px rgba(94, 84, 35, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+
 }
 
 .events h1 {
@@ -341,6 +348,8 @@ footer p {
     border-bottom: 5px solid #8f7e6a;
     border-top: 5px solid #8f7e6a;
     padding: 20px 3px 3px 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+
 }
 
 .event h3 {
@@ -372,6 +381,8 @@ footer p {
     /*border-left: 5px solid #8f7e6a;*/
     /*border-right: 5px solid #8f7e6a;*/
     padding: 20px 3px 3px 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+
 }
 
 .event-grid {
@@ -423,6 +434,10 @@ footer p {
 
     .event img {
         max-height: none;
+    }
+
+    #introParagraph {
+        font-size: large;
     }
 }
 
