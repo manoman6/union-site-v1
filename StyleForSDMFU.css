@@ -218,6 +218,7 @@ footer p {
 
     .logo h1 {
         font-size: larger;
+        text-align: center;
     }
     .logo img {
         width: 60px; /*fixme: make logo bigger, maybe 60px?*/
