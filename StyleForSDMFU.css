@@ -129,6 +129,7 @@ footer p {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    padding-top: 2vh;
 }
 
 .navbar-footer a{
@@ -192,7 +193,8 @@ footer p {
 @media (max-width: 800px) {
     .toggle-button {
         display: flex;
-        margin-left: 8px;
+        margin-left: 15px;
+        margin-top: 5px;
     }
 
     .navbar-links {
@@ -218,7 +220,7 @@ footer p {
         font-size: larger;
     }
     .logo img {
-        width: 50px; /*fixme: make logo bigger, maybe 60px?*/
+        width: 60px; /*fixme: make logo bigger, maybe 60px?*/
     }
 }
 
@@ -231,16 +233,39 @@ footer p {
 /*Beginning of Index section*/
 /*================================================================================================*/
 
+#intro-title-paragraph {
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 0 1vw;
+    background-color: white; /*was ff4740*/
+    color: #333;
+    /*background-image: url("compressedPhotos/posingatfirefightermemorial.jpeg"); !*trying a different background image*!*/
+    /*background-image: url("compressedPhotos/firefighterInSmoke Large.jpeg");*/
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%),
+    url('compressedPhotos/firefighterInSmoke Large.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 5px;
+}
 
 #introParagraph {
-    color: #333333; /* Dark gray text color for high contrast on white background */
+    /*color: #333333; !* Dark gray text color for high contrast on white background *!*/
+    color: navajowhite;
     font-size: 2em; /* Large text size for better visibility */
     font-weight: bold; /* Bold font to make the text prominent */
     text-align: center; /* Centers the text horizontally */
-    margin: 30px auto; /* Margin to center the paragraph and provide vertical spacing */
-    padding: 20px 0; /*padding to provide space for lines*/
+    margin: 30px 3vw; /* Margin to center the paragraph and provide vertical spacing */
+    /*padding: 20px 0; !*padding to provide space for lines*!*/
     position: relative ;
     transition: all 0.3s ease; /* Smooth transition for shadow changes */
+
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent gray background */
+    padding: 20px; /* Padding inside the box */
+    /*text-align: center; !* Center the text *!*/
+    border-radius: 10px; /* Optional: Rounded corners */
+    display: inline-block; /* Ensures the box wraps the content tightly */
 }
 
 #introParagraph:before,
@@ -249,17 +274,17 @@ footer p {
     position: absolute; /* Absolute positioning relative to the paragraph */
     left: 0; /* Aligning to the far left */
     right: 0; /* Aligning to the far right */
-    height: 1px; /* Thin line */
+    height: 0px; /* Thin line */ /* made it 0 to get rid of line for now */
     background-color: #ff0000; /* Red color for the lines */
     transition: all 0.3s ease; /* Smooth transitions for hover effects */
 }
 
 #introParagraph:before {
-    top: 0; /*position line at top of paragraph*/
+    top: -10px; /*position line at top of paragraph*/
 }
 
 #introParagraph:after {
-    bottom: 0; /*position line at bottom of paragraph*/
+    bottom: -10px; /*position line at bottom of paragraph*/
 }
 
 #introParagraph:hover:before,
@@ -277,23 +302,81 @@ footer p {
     background-position: center;
     background-size: cover;
     position: relative;
-    z-index: 100;
+    z-index: 100; /*for the purpose of a transparent background image*/
 }
 
 #backgroundphotoH1 {
-    color: #FF2E01;
-    padding-top: 20px;
-    text-shadow:
-            -1px -1px 0 black,
-            1px -1px 0 black,
-            -1px 1px 0 black,
-            1px 1px 0 black;
+    color: navajowhite;
+    /*color: #e3242b;*/
+    /*padding-top: 20px;*/
+    /*text-shadow:*/
+    /*        -1px -1px 0 black,*/
+    /*        1px -1px 0 black,*/
+    /*        -1px 1px 0 black,*/
+    /*        1px 1px 0 black;*/
+
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent gray background */
+    /*color: white; !* Text color *!*/
+    padding: 20px; /* Padding inside the box */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Optional: Rounded corners */
+    display: inline-block; /* Ensures the box wraps the content tightly */
+    /*margin-top: 20px;*/
+    margin: 20px 7vw;
+}
+
+.events h1 {
+    /*margin-top: 5vh;*/
+    color: navajowhite;
+    /*background-color: rgba(0, 0, 0, 0.5); !* Transparent gray background *!*/
+    /*padding: 20px; !* Padding inside the box *!*/
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Optional: Rounded corners */
+    /*display: inline-block; !* Ensures the box wraps the content tightly *!*/
+    /*margin-top: 20px;*/
+    margin: 2vw 7vw;
+    /*text-decoration: underline overline #8f7e6a;*/
+    /*text-decoration-thickness: 5px ;*/
+    border-bottom: 5px solid #8f7e6a;
+    border-top: 5px solid #8f7e6a;
+    padding: 20px 3px 3px 20px;
+}
+
+.event h3 {
+    text-decoration: underline;
+}
+.mini-gallery-background {
+    /*background-image: url("compressedPhotos/americanflag.jpeg");*/
+    border-radius: 5px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%),
+    url('compressedPhotos/americanflag.jpeg');
+
+}
+
+#mini-gallery-title h1 {
+     color: #ffe1b4;
+    /*background-color: rgba(0, 0, 0, 0.1); !* Transparent gray background *!*/
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, 0) 100%);
+    /*color: white; !* Text color *!*/
+    /*padding: 20px; !* Padding inside the box *!*/
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Optional: Rounded corners */
+    display: inline-block; /* Ensures the box wraps the content tightly */
+    /*margin-top: 20px;*/
+    margin: 2vw 7vw;
+
+    border-bottom: 5px solid #8f7e6a;
+    border-top: 5px solid #8f7e6a;
+    /*border-left: 5px solid #8f7e6a;*/
+    /*border-right: 5px solid #8f7e6a;*/
+    padding: 20px 3px 3px 20px;
 }
 
 .event-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
     gap: 20px;  /*Spacing between grid items */
+    margin: 20px 5%;
 }
 
 .event img {
@@ -306,6 +389,28 @@ footer p {
 
 .event p {
     padding: 10px; /* Padding around the text for better readability */
+}
+
+.mini-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 250px;
+    gap: 10px;
+    width: 90%;
+    margin: 20px auto 0;
+    padding-bottom: 20px;
+}
+
+.mini-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform .3s ease-in-out;
+}
+
+.mini-gallery img:hover{
+    transform: scale(1.1);
 }
 
 /* Responsive adjustments for smaller screens */
@@ -331,9 +436,10 @@ footer p {
 .boxaboutUs {
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    /*padding: 0 20px; !*trying not having the padding*!*/
+    padding: 0; /*i think i like the change in padding, just need to add padding to event on index*/
     background-color: white;/*was ff4740 */
-    opacity: .8;
+    /*opacity: .8;*/ /*removed to fix issues with background photo and foreground effect*/
 }
 .aboutus{
     width: 90%;
@@ -345,6 +451,13 @@ footer p {
 .aboutus h1 {
     padding-top: 20px;
 }
+
+#about-page-info h1, h2 {
+    padding-top: 2vh;
+    color: #5C5C5C;
+}
+
+
 
 /*================================================================================================*/
 /*end of About Us section*/
@@ -529,6 +642,7 @@ footer p {
     line-height: 1.2; /* Adjust line height to create more space */
     padding-bottom: 4px; /* Increase padding if necessary */
     margin: 10px;
+    color: #5C5C5C;
 }
 
 /*original*/
@@ -544,13 +658,14 @@ footer p {
     margin-top: 20px;
     margin-bottom: 0px;
     text-decoration: underline;
-
+    color: #5C5C5C;
 }
 
 /*original*/
 #hiringSalaries h2{
     text-align: center;
     margin-top: 0;
+    color: #5C5C5C;
 }
 
 /*original*/
@@ -615,11 +730,62 @@ footer p {
 /*Beginning of Leadership section*/
 /*================================================================================================*/
 
+
 .leadershipGallery{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    /*background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%),*/
+    /*url('compressedPhotos/scrolls Medium.jpeg');*/
+    /*background-image: url("compressedPhotos/scrolls Medium.jpeg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*margin: 0;*/
+}
+
+#leadership-title {
+    color: #5C5C5C;
+    position: relative;
+    margin: 20px 7vw;
+    text-align: center;
+    /*background-color: rgba(0, 0, 0, 0.5); !* Transparent gray background *!*/
+    /*!*color: white; !* Text color *!*!*/
+    /*padding: 20px; !* Padding inside the box *!*/
+    /*text-align: center; !* Center the text *!*/
+    /*border-radius: 10px; !* Optional: Rounded corners *!*/
+    /*display: inline-block; !* Ensures the box wraps the content tightly *!*/
+    /*!*margin-top: 20px;*!*/
+    /*margin: 20px 7vw;*/
+
+    /*margin: 2vh 5vw;*/
+
+}
+
+#leadership-title:before,
+#leadership-title:after {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Absolute positioning relative to the paragraph */
+    left: 0; /* Aligning to the far left */
+    right: 0; /* Aligning to the far right */
+    height: 2px; /* Thin line */ /* made it 0 to get rid of line for now */
+    background-color: #ff0000; /* Red color for the lines */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+#leadership-title:before {
+    top: -10px; /*position line at top of paragraph*/
+}
+
+#leadership-title:after {
+    bottom: -10px; /*position line at bottom of paragraph*/
+}
+
+#leadership-title:hover:before,
+#leadership-title:hover:after {
+    background-color: #ff6347;
 }
 
 .president{
