@@ -222,6 +222,13 @@ footer p {
     .logo img {
         width: 60px; /*fixme: make logo bigger, maybe 60px?*/
     }
+
+    .main-content #intro-title-paragraph h1{
+        font-size: 1.5em;
+    } /*changes the font size of intro title*/
+    /*#backgroundphotoh1 {*/
+    /*    font-size: 1.5em;*/
+    /*}*/
 }
 
 
@@ -426,6 +433,15 @@ footer p {
     transform: scale(1.1);
 }
 
+.boxaboutUs {
+    width: 100%;
+    margin: 0 auto;
+    /*padding: 0 20px; !*trying not having the padding*!*/
+    padding: 0; /*i think i like the change in padding, just need to add padding to event on index*/
+    background-color: white;/*was ff4740 */
+    /*opacity: .8;*/ /*removed to fix issues with background photo and foreground effect*/
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 800px) {
     .event-grid {
@@ -440,8 +456,8 @@ footer p {
         font-size: large;
     }
 
-    #backgroundphotoh1 {
-        font-size: large;
+    #backgroundphotoh1 h1{
+        font-size: 10px;
     }
 }
 
@@ -454,14 +470,7 @@ footer p {
 /*================================================================================================*/
 
 
-.boxaboutUs {
-    width: 100%;
-    margin: 0 auto;
-    /*padding: 0 20px; !*trying not having the padding*!*/
-    padding: 0; /*i think i like the change in padding, just need to add padding to event on index*/
-    background-color: white;/*was ff4740 */
-    /*opacity: .8;*/ /*removed to fix issues with background photo and foreground effect*/
-}
+
 .aboutus{
     width: 90%;
     margin: 0 auto;
