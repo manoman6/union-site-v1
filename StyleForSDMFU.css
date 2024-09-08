@@ -805,7 +805,7 @@ footer p {
     left: 0; /* Aligning to the far left */
     right: 0; /* Aligning to the far right */
     height: 2px; /* Thin line */ /* made it 0 to get rid of line for now */
-    background-color: #ff0000; /* Red color for the lines */
+    background-color: #ff0000; /* Red color for the lines*/
     transition: all 0.3s ease; /* Smooth transitions for hover effects */
 }
 
