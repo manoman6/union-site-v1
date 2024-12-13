@@ -9,6 +9,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+let  slideIndex = 0;
+
+document.addEventListener("DOMContentLoaded", function () {
+    showSlides(slideIndex);
+})
+
+
+function changeSlide(n) {
+    slideIndex += n;
+    showSlides(slideIndex);
+}
+
+function showSlides(n) {
+    const slides = document.querySelectorAll(".event-slide")
+
+    if (n >= slides.length) {
+        slideIndex = 0
+    }
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach(slide => slide.style.display = "none");
+
+    slides[slideIndex].style.display = "block";
+}
+
+setInterval(() => {
+    changeSlide(1);
+}, 15000);
+
+// function responseFunction() {
+//     let x = document.getElementById("top-navbar");
+//     if (x.classList.contains("responsive")) {
+//         x.classList.remove("responsive");
+//     } else {
+//         x.classList.add("responsive");
+//     }
+// }
+
 /*
 document.addEventListener('DOMContentLoaded', function () {
     // Get the button element
