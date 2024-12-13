@@ -4,130 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South Davis Metro Fire Union</title>
-    <link rel="stylesheet" href="StyleForSDMFU.css"> <!-- Link to your CSS file for styling -->
-    <script src="hello.js"></script>
+    <link rel="stylesheet" href="StyleForSDMFU.css">
+    <script src="script.js"></script>
 </head>
 <body>
-<!--Here for the facebook embed link -->
-<!--<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0" nonce="79sLyMAv"></script>-->
-
-<!-- Header -->
-<header>
-    <div class="container">
-        <div class="logo">
-            <img src="photos/union_logo_transparent.png" alt="South Davis Metro Fire Union Logo">
-            <h1>South Davis Metro Fire Local Union 5143</h1>
-
-        </div>
-
-        <nav class="navbar">
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutPage.html">About</a></li>
-                    <li><a href="PeerSupport.html">Peer Support</a></li>
-                    <li><a href="Recruitment.html">Recruitment</a></li>
-                    <li><a href="Leadership.html">Leadership</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="https://south-davis-metro-fire-local-5143.square.site">Union Store</a> </li>
-                </ul>
+    <header>
+        <div class="header-div">
+            <div class="logo">
+                <img src="photos/union_logo_transparent.png" alt="South Davis Metro Fire Union Logo">
+                <h1>South Davis Metro Fire Local Union 5143</h1>
             </div>
-        </nav>
-    </div>
 
-</header>
+            <nav class="navbar">
+                <div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                    <div class="navbar-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="aboutPage.html">About</a></li>
+                            <li><a href="PeerSupport.html">Peer Support</a></li>
+                            <li><a href="Recruitment.html">Recruitment</a></li>
+                            <li><a href="Leadership.html">Leadership</a></li>
+                            <li><a href="Gallery.html">Gallery</a></li>
+                            <li><a href="https://south-davis-metro-fire-local-5143.square.site">Union Store</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
 <!-- Main Content Area -->
-<section class="main-content">
+    <section class="main-content">
 
-    <div class="container" id="backgroundphoto">
-            <div class="boxaboutUs">
-<!--                <div class="aboutus">-->
-                <div id="intro-title-paragraph">
-                    <h1 id="backgroundphotoH1">SOUTH DAVIS METRO FIRE FIGHTERS' IAFF LOCAL 5143</h1>
-                    <p id="introParagraph">Ensuring firefighter well-being and community safety, the
-                        IAFF Local 5143 advocates for fair conditions and unity,
-                        fostering excellence in our vital roles. Together, we embody
-                        camaraderie, professionalism, and selfless service.</p>
-                </div>
-                <div class="events">
-                    <h1>EVENTS HOSTED BY THE UNION</h1>
-                    <div class="event-grid">
-                        <div class="event">
-                            <h3>Annual Chili Cook-off</h3>
-                            <img src="photos/chili_cook_off_ad.jpeg"/>
+        <div class="header-div" id="backgroundphoto">
+                <div class="boxaboutUs">
+                    <div id="intro-title-paragraph">
+                        <h1 id="backgroundphotoH1">SOUTH DAVIS METRO FIRE FIGHTERS' IAFF LOCAL 5143</h1>
+                        <p id="introParagraph">Ensuring firefighter well-being and community safety, the
+                            IAFF Local 5143 advocates for fair conditions and unity,
+                            fostering excellence in our vital roles. Together, we embody
+                            camaraderie, professionalism, and selfless service.</p>
+                    </div>
+                    <h1 id="events-slideshow-heading">EVENTS HOSTED BY THE UNION</h1>
+                    <div class="events-slideshow-container">
+                        <a class="previous-slide"  id='prev-button-ontop' onclick="changeSlide(-1)">&#10094;</a>
+                        <a class="next-slide" id='next-button-ontop' onclick="changeSlide(1)">&#10095;</a>
+                        <div class="event-slide fade">
+                            <div class="img-event-slide">
+                                <img src="photos/chili_cook_off_ad.jpeg" alt="Slide 1: chili Cook-Off" id="chili-cookoff-img"/>
+                            </div>
+                            <div class="caption-event-slide">
+                                <h3>Annual Chili Cook-Off</h3>
+                                <p>While the teams are competing for Best Chili and Best Booth, they are unified towards one
+                                    common goal: To raise money for The University of Utah Health Burn Camp Programs. The
+                                    Burn Camp programs help burn survivors adjust to the personal challenges associated with
+                                    surviving a burn injury. Five camps geared towards specific age groups provide a safe
+                                    and supportive atmosphere that is conducive to healing. This gives burn survivors the
+                                    tools needed to endure and thrive through their recovery.</p>
+                            </div>
                         </div>
-                        <div class="event">
-                            <h3>Burn Camp Breakfast</h3>
-                            <img src="compressedPhotos/burn association.jpeg"/>
+                        <div class="event-slide fade">
+                            <div class="img-event-slide">
+                                <img src="compressedPhotos/burn association.jpeg" alt="Slide 2: Burn Association" id="burn-camp-img"/>
+                            </div>
+                            <div class="caption-event-slide">
+                                <h3>Burn Camp Breakfast</h3>
+                                <p>The University of Utah Health Burn Camp Program was established in 1993 to help support
+                                    burn survivors with the personal challenges associated with surviving a burn injury.
+                                    We currently run five different programs geared toward specific age groups, providing
+                                    a safe and supportive atmosphere for everyone involved. Burn camp is a wonderful way to
+                                    begin the healing process. Burn camp staff are made up of professional nurses,
+                                    firefighters, physical therapists, and volunteers.</p>
+                            </div>
                         </div>
-                        <div class="event">
-                            <h3>Cancer Victim Support T-Shirt</h3>
-                            <img src="compressedPhotos/cancerShirt.jpg" height="585" width="1000"/>
+                        <div class="event-slide fade">
+                            <div class="img-event-slide">
+                                <img src="compressedPhotos/cancerShirtcopy.png" alt="Slide 3: Cancer Victim Support Shirt"/>
+                            </div>
+                            <div class="caption-event-slide">
+                                <h3>Cancer Victim Support Fundraiser</h3>
+                                <p>Local 5143 of South Davis
+                                    Metro Fire is always looking for ways to give back to our community.
+                                    This time it has hit close to home. One of our very own has a sister
+                                    in need. She has already fought this fight once before. Please help us support her and
+                                    her family win the battle against Stage 4 breast cancer. We are selling breast cancer
+                                    awareness T-shirts. All proceeds will go directly to her and her family.</p>
+                            </div>
                         </div>
-                        <div class="event">
-                            <h3>Little Warriors Camp</h3>
-                            <img src="compressedPhotos/armyoutreachnew Large.jpeg" height="225" width="225"/>
+                        <div class="event-slide fade">
+                            <div class="img-event-slide">
+                                <img src="compressedPhotos/armyoutreachnew Large.jpeg" alt="Slide 4: Little Warriors Camp"/>
+                            </div>
+                            <div class="caption-event-slide">
+                                <h3>Little Warriors Camp</h3>
+                                <p>The Little Warriors Camp, organized by the Utah Elks Veterans Program, is a compassionate
+                                    initiative designed to support children who have lost a parent in military service or
+                                    due to PTSD-related circumstances. This annual camp offers a nurturing environment where
+                                    young participants, along with their caregivers, can find solace, engage in recreational
+                                    activities, and connect with others facing similar challenges.</p>
+                            </div>
+                        </div>
+                        <a class="previous-slide"  id='prev-button-onbottom' onclick="changeSlide(-1)">&#10094;</a>
+                        <a class="next-slide" id='next-button-onbottom' onclick="changeSlide(1)">&#10095;</a>
+                    </div>
+                    <script src="script.js"></script>
+                    <div class="mini-gallery-background">
+                        <div id="mini-gallery-title">
+                            <h1>GALLERY<br>"Committed to Excellence, Delivered with Pride"</h1>
+                        </div>
+                        <div class="mini-gallery">
+                            <img src="compressedPhotos/85guysposinginfrontoftruck.jpeg" height="768" width="1024"/>
+                            <img src="compressedPhotos/85posingunderflag.jpeg" height="1280" width="960"/>
+                            <img src="compressedPhotos/85walkingactionshot.jpeg" height="1280" width="1024"/>
+                            <img src="compressedPhotos/cuttingroofactionshot.jpeg" height="768" width="1024"/>
+                            <img src="compressedPhotos/eastonincutout.jpeg" height="1280" width="960"/>
+                            <img src="compressedPhotos/gnietingactionshot.jpeg" height="853" width="1280"/>
+                            <img src="compressedPhotos/largefireslc.jpeg" height="960" width="1280"/>
+                            <img src="compressedPhotos/activeroofcuttingactionshot.jpeg" height="1024" width="768"/>
+                            <img src="compressedPhotos/posingatfirefightermemorial.jpeg"/>
+                            <img src="compressedPhotos/largefireslc.jpeg" height="960" width="1280"/>
+                            <img src="compressedPhotos/VerticalVentTraining Large.jpeg" height="978" width="1280"/>
+                            <img src="compressedPhotos/wildiandactionshot.jpeg" height="556" width="989"/>
+                            <img src="compressedPhotos/82BTurnOutZoomed.jpg" height="6000" width="3944"/>
+                            <img src="compressedPhotos/RecruitPullingHose.jpeg" height="1796" width="2694"/>
+                            <img src="compressedPhotos/SermonInSmoke.jpg" height="4000" width="6000"/>
+                            <img src="compressedPhotos/samrepelling Large.jpeg" height="1024" width="682"/>
+                            <img src="compressedPhotos/BailOutTraining Large.jpeg" height="853" width="1280"/>
+                            <img src="compressedPhotos/85guysposing.jpeg" height="768" width="1024"/>
                         </div>
                     </div>
                 </div>
-                <div class="mini-gallery-background">
-                    <div id="mini-gallery-title">
-                        <h1>GALLERY<br>"Committed to Excellence, Delivered with Pride"</h1>
-                    </div>
-                    <div class="mini-gallery">
-
-                        <img src="compressedPhotos/85guysposinginfrontoftruck.jpeg" height="768" width="1024"/>
-                        <img src="compressedPhotos/85posingunderflag.jpeg" height="1280" width="960"/>
-                        <img src="compressedPhotos/85walkingactionshot.jpeg" height="1280" width="1024"/>
-                        <img src="compressedPhotos/cuttingroofactionshot.jpeg" height="768" width="1024"/>
-                        <img src="compressedPhotos/eastonincutout.jpeg" height="1280" width="960"/>
-                        <img src="compressedPhotos/gnietingactionshot.jpeg" height="853" width="1280"/>
-                        <img src="compressedPhotos/largefireslc.jpeg" height="960" width="1280"/>
-                        <img src="compressedPhotos/activeroofcuttingactionshot.jpeg" height="1024" width="768"/>
-                        <img src="compressedPhotos/posingatfirefightermemorial.jpeg"/>
-                        <img src="compressedPhotos/largefireslc.jpeg" height="960" width="1280"/>
-                        <img src="compressedPhotos/VerticalVentTraining Large.jpeg" height="978" width="1280"/>
-                        <img src="compressedPhotos/wildiandactionshot.jpeg" height="556" width="989"/>
-                        <img src="compressedPhotos/82BTurnOutZoomed.jpg" height="6000" width="3944"/>
-                        <img src="compressedPhotos/RecruitPullingHose.jpeg" height="1796" width="2694"/>
-                        <img src="compressedPhotos/SermonInSmoke.jpg" height="4000" width="6000"/>
-                        <img src="compressedPhotos/samrepelling Large.jpeg" height="1024" width="682"/>
-                        <img src="compressedPhotos/BailOutTraining Large.jpeg" height="853" width="1280"/>
-                        <img src="compressedPhotos/85guysposing.jpeg" height="768" width="1024"/>
-
-                    </div>
-                </div>
-            </div>
-    </div>
-</section>
-
+        </div>
+    </section>
 
 <!-- Footer -->
-<footer class="footer">
-    <nav class="navbar-footer">
-        <ul>
-           <li>
-               <a href="https://www.facebook.com/SDMFSA">
-                   <img src="photos/Facebook_Logo_Primary.png"/>
-               </a>
-           </li>
-            <li>
-                <a href="https://www.instagram.com/sdmf.local5143?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <img src="photos/Instagram_Glyph_Gradient.png">
-            </a>
-            </li>
-        </ul>
-    </nav>
-    <p>&copy; 2024 South Davis Metro Fire Union. All rights reserved.</p>
+    <footer class="footer">
+        <nav class="navbar-footer">
+            <ul>
+               <li>
+                   <a href="https://www.facebook.com/SDMFSA">
+                       <img src="photos/Facebook_Logo_Primary.png"/>
+                   </a>
+               </li>
+                <li>
+                    <a href="https://www.instagram.com/sdmf.local5143?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <img src="photos/Instagram_Glyph_Gradient.png">
+                </a>
+                </li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 South Davis Metro Fire Union. All rights reserved.</p>
 
-</footer>
-
+    </footer>
 </body>
 </html>

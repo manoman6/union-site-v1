@@ -11,31 +11,61 @@
 body {
     font-family: Raleway,"Sama Gurmukhi", sans-serif;
     height: 100%;
-    background-color: white; /*was navajowhite*/
+    background-color: white;
     margin: 0;
-    /* added margin 0, hieght 100%, removed line-height 1.6*/
 }
 
 title{
     font-family: Raleway, sans-serif;
 }
 
+/* Header Styles */
 /*holds logo*/
-.container {
+.header-div {
     max-width: 100%;
     margin: 0 auto;
     padding: 0px;
 }
 
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    margin: 0;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    height: 21px;
+    justify-content: space-between;
+    width: 30px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
 /* Header Styles */
 header {
-    background-color: #3b3b3b; /*was #333*/
+    background-color: #3b3b3b;
     color: navajowhite;
     padding: 10px;
 }
 
 .logo img {
-    width: 100px; /* Adjust size as needed */
+    width: 100px;
     height: auto;
     margin-right: 10px;
 }
@@ -66,21 +96,19 @@ header {
 
 .navbar-links li {
     padding: 15px 20px;
-    /*added for hover effect*/
-    transition: transform 0.3s ease; /*smooth transition for scaling*/
+    transition: transform 0.3s ease;
 }
 
 .navbar-links a {
     text-decoration: none;
     color: white;
-    transition: color 0.3s ease; /*smooth color for transition*/
+    transition: color 0.3s ease;
 }
 
-/*added for hover effect*/
-/* Hover effects for list items and links */
+
 .navbar-links li:hover, .navbar-links a:hover {
-    transform: scale(1.1); /* Makes the text bigger */
-    color: #FF2E01; /* Changes the text color */
+    transform: scale(1.1);
+    color: #FF2E01;
 }
 
 .toggle-button {
@@ -96,6 +124,58 @@ header {
     width: 100%;
     background-color: white;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+        margin-left: 15px;
+        margin-top: 5px;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .navbar-links {
+        display: none;
+        position: absolute;
+        margin-top: 0;
+        left: 15px;
+        flex-direction: column;
+        background-color: rgba(59, 59, 59, 0.95);
+        z-index: 1001;
+        padding: 20px 0;
+        border-radius: 5px;
+    }
+
+    .navbar-links ul {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .logo h1 {
+        font-size: larger;
+        text-align: left;
+    }
+    .logo img {
+        width: 60px;
+    }
+
+    .main-content #intro-title-paragraph h1 {
+        font-size: 2em;
+    }
 }
 
 /* Main Content Styles */
@@ -125,7 +205,7 @@ footer p {
 }
 
 .navbar-footer{
-    background-color: #3b3b3b; /* Dark background for the navbar */
+    background-color: #3b3b3b;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -138,7 +218,7 @@ footer p {
     text-decoration: none;
 }
 .navbar-footer ul{
-    list-style-type: none; /* Removes default list bullets */
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -155,7 +235,7 @@ footer p {
     max-width: 2em;
 }
 
-@media (max-width: 800px) { /*was 768px*/
+@media screen and (max-width: 768px) {
     .navbar-footer li {
         flex: 1 1 100%;
         height: auto;
@@ -163,7 +243,6 @@ footer p {
 }
 
 .navbar-footer a:hover{
-    /*background-color: #ff4740;*/
     color: navajowhite;
 }
 
@@ -178,7 +257,7 @@ footer p {
 
 .btn {
     display: inline-block;
-    background-color: navajowhite; /*was ff4740*/
+    background-color: navajowhite;
     color: #3b3b3b;
     padding: 10px 20px;
     text-decoration: none;
@@ -189,48 +268,6 @@ footer p {
     background-color: #ff4740;
 }
 
-
-@media (max-width: 800px) {
-    .toggle-button {
-        display: flex;
-        margin-left: 15px;
-        margin-top: 5px;
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links li {
-        text-align: center;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-    .logo h1 {
-        font-size: larger;
-        text-align: center;
-    }
-    .logo img {
-        width: 60px; /*fixme: make logo bigger, maybe 60px?*/
-    }
-
-    .main-content #intro-title-paragraph h1{
-        font-size: 2em;
-    } /*changes the font size of intro title*/
-    /*#backgroundphotoh1 {*/
-    /*    font-size: 1.5em;*/
-    /*}*/
-}
 
 
 /*================================================================================================*/
@@ -246,10 +283,8 @@ footer p {
     margin: 0 auto;
 
     padding: 0 1vw;
-    background-color: white; /*was ff4740*/
+    background-color: white;
     color: #333;
-    /*background-image: url("compressedPhotos/posingatfirefightermemorial.jpeg"); !*trying a different background image*!*/
-    /*background-image: url("compressedPhotos/firefighterInSmoke Large.jpeg");*/
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%),
     url('compressedPhotos/firefighterInSmoke Large.jpeg');
     background-position: center;
@@ -260,41 +295,37 @@ footer p {
 }
 
 #introParagraph {
-    /*color: #333333; !* Dark gray text color for high contrast on white background *!*/
     color: navajowhite;
-    font-size: 2em; /* Large text size for better visibility */
-    font-weight: bold; /* Bold font to make the text prominent */
-    text-align: center; /* Centers the text horizontally */
-    margin: 30px 7vw; /* Margin to center the paragraph and provide vertical spacing */
-    /*padding: 20px 0; !*padding to provide space for lines*!*/
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 7vw;
     position: relative ;
-    transition: all 0.3s ease; /* Smooth transition for shadow changes */
-
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent gray background */
-    padding: 20px; /* Padding inside the box */
-    /*text-align: center; !* Center the text *!*/
-    border-radius: 10px; /* Optional: Rounded corners */
-    display: inline-block; /* Ensures the box wraps the content tightly */
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 #introParagraph:before,
 #introParagraph:after {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Absolute positioning relative to the paragraph */
-    left: 0; /* Aligning to the far left */
-    right: 0; /* Aligning to the far right */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
     height: 0px; /* Thin line */ /* made it 0 to get rid of line for now */
-    background-color: #ff0000; /* Red color for the lines */
-    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    background-color: #ff0000;
+    transition: all 0.3s ease;
 }
 
 #introParagraph:before {
-    top: -10px; /*position line at top of paragraph*/
+    top: -10px;
 }
 
 #introParagraph:after {
-    bottom: -10px; /*position line at bottom of paragraph*/
+    bottom: -10px;
 }
 
 #introParagraph:hover:before,
@@ -304,7 +335,7 @@ footer p {
 
 
 #introParagraph:hover {
-    text-shadow: 4px 4px 8px rgba(94, 84, 35, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+    text-shadow: 4px 4px 8px rgba(94, 84, 35, 0.7);
 }
 
 #backgroundphoto {
@@ -312,59 +343,26 @@ footer p {
     background-position: center;
     background-size: cover;
     position: relative;
-    z-index: 100; /*for the purpose of a transparent background image*/
+    z-index: 100;
 }
 
 #backgroundphotoH1 {
     color: navajowhite;
-    /*color: #e3242b;*/
-    /*padding-top: 20px;*/
-    /*text-shadow:*/
-    /*        -1px -1px 0 black,*/
-    /*        1px -1px 0 black,*/
-    /*        -1px 1px 0 black,*/
-    /*        1px 1px 0 black;*/
-
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent gray background */
-    /*color: white; !* Text color *!*/
-    padding: 20px; /* Padding inside the box */
-    text-align: center; /* Center the text */
-    border-radius: 10px; /* Optional: Rounded corners */
-    display: inline-block; /* Ensures the box wraps the content tightly */
-    /*margin-top: 20px;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
     margin: 20px 12vw;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 #backgroundphotoH1:hover{
-    text-shadow: 4px 4px 8px rgba(94, 84, 35, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+    text-shadow: 4px 4px 8px rgba(94, 84, 35, 0.7);
 
 }
 
-.events h1 {
-    /*margin-top: 5vh;*/
-    color: navajowhite;
-    /*background-color: rgba(0, 0, 0, 0.5); !* Transparent gray background *!*/
-    /*padding: 20px; !* Padding inside the box *!*/
-    text-align: center; /* Center the text */
-    border-radius: 10px; /* Optional: Rounded corners */
-    /*display: inline-block; !* Ensures the box wraps the content tightly *!*/
-    /*margin-top: 20px;*/
-    margin: 2vw 2vw;
-    /*text-decoration: underline overline #8f7e6a;*/
-    /*text-decoration-thickness: 5px ;*/
-    border-bottom: 5px solid #8f7e6a;
-    border-top: 5px solid #8f7e6a;
-    padding: 20px 3px 3px 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for a dynamic effect */
-
-}
-
-.event h3 {
-    text-decoration: underline;
-}
 .mini-gallery-background {
-    /*background-image: url("compressedPhotos/americanflag.jpeg");*/
     border-radius: 5px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%),
     url('compressedPhotos/americanflag.jpeg');
@@ -373,44 +371,168 @@ footer p {
 
 #mini-gallery-title h1 {
      color: #ffe1b4;
-    /*color: navajowhite;*/
-    /*background-color: rgba(0, 0, 0, 0.1); !* Transparent gray background *!*/
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, 0) 100%);
-    /*color: white; !* Text color *!*/
-    /*padding: 20px; !* Padding inside the box *!*/
-    text-align: center; /* Center the text */
-    border-radius: 10px; /* Optional: Rounded corners */
-    /*display: inline-block; !* Ensures the box wraps the content tightly *!*/
-    /*margin-top: 20px;*/
+    text-align: center;
+    border-radius: 10px;
     margin: 2vw 2vw;
 
     border-bottom: 5px solid #8f7e6a;
     border-top: 5px solid #8f7e6a;
-    /*border-left: 5px solid #8f7e6a;*/
-    /*border-right: 5px solid #8f7e6a;*/
     padding: 20px 3px 3px 20px;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for a dynamic effect */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 
 }
 
-.event-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
-    gap: 20px;  /*Spacing between grid items */
-    margin: 20px 5%;
+.events-slideshow-container {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    max-height: 500px;
 }
 
-.event img {
-    width: 100%; /* Make the image responsive */
-    height: auto ; /* Maintain aspect ratio was auto*/
-    object-fit: cover;
-    border-radius: 40px;
-    justify-content: center ;
+.event-slide {
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    background-color: red;
+    max-height: min-content;
 }
 
-.event p {
-    padding: 10px; /* Padding around the text for better readability */
+.img-event-slide {
+    width: 55%;
+    /*padding: 20px;*/
+    float: left;
+    max-height: 400px;
+    min-height: 400px;
+    max-width: 55%;
 }
+.img-event-slide img {
+    min-height: 400px;
+    max-width: 55%;
+    object-fit: contain;
+}
+
+#chili-cookoff-img {
+    transform: translateY(-40px);
+}
+#burn-camp-img {
+    transform: translateY(-40px);
+}
+
+.caption-event-slide {
+    width: 40%;
+    padding: 20px;
+    text-align: Left;
+    float: left;
+    max-height: min-content;
+    cursor: pointer;
+    user-select: none;
+}
+
+.caption-event-slide h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: "Ubuntu", Raleway, serif;
+}
+
+.caption-event-slide p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #5C5C5C;
+}
+
+.previous-slide {
+    left: 10px;
+}
+.next-slide{
+    right: 10px;
+}
+
+#prev-button-ontop {
+    display: none;
+}
+#next-button-ontop {
+    display: none;
+}
+
+.previous-slide:hover, .next-slide:hover {
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    user-select: none;
+}
+
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#events-slideshow-heading {
+    color: navajowhite;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2vw 2vw;
+    border-bottom: 5px solid #8f7e6a;
+    border-top: 5px solid #8f7e6a;
+    padding: 20px 3px 3px 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 768px){
+    .events-slideshow-container{
+        height: 100%;
+        margin: 10px;
+        width: 95%;
+        display: table;
+    }
+    .img-event-slide{
+        height: 50%;
+        max-height: 50%;
+        min-height: 50%;
+        min-width: 100%;
+    }
+    .img-event-slide img {
+        object-fit: cover;
+        min-height: 100%;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .caption-event-slide{
+        height: 50%;
+        width: 100%;
+    }
+    .caption-event-slide h3 {
+        text-align: center;
+    }
+    #prev-button-onbottom {
+        display: none;
+    }
+    #next-button-onbottom {
+        display: none;
+    }
+    #next-button-ontop {
+        display: inline-grid;
+    }
+    #prev-button-ontop {
+        display: inline-grid;
+    }
+    #chili-cookoff-img {
+        transform: none;
+    }
+    #burn-camp-img {
+        transform: none;
+    }
+}
+
 
 .mini-gallery {
     display: grid;
@@ -437,22 +559,11 @@ footer p {
 .boxaboutUs {
     width: 100%;
     margin: 0 auto;
-    /*padding: 0 20px; !*trying not having the padding*!*/
-    padding: 0; /*i think i like the change in padding, just need to add padding to event on index*/
-    background-color: white;/*was ff4740 */
-    /*opacity: .8;*/ /*removed to fix issues with background photo and foreground effect*/
+    padding: 0;
+    background-color: white;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 800px) {
-    .event-grid {
-        grid-template-columns: 1fr; /* Stack the grid items on top of each other on small screens */
-    }
-
-    .event img {
-        max-height: none;
-    }
-
+@media (max-width: 768px) {
     #introParagraph {
         font-size: large;
     }
@@ -510,8 +621,8 @@ footer p {
 
 .PeerSupportMembers h3 {
     border-bottom: 2px solid currentColor;
-    line-height: 1.2; /* Adjust line height to create more space */
-    padding-bottom: 4px; /* Increase padding if necessary */
+    line-height: 1.2;
+    padding-bottom: 4px;
     margin-left: 30vw;
     margin-right: 30vw;
     margin-bottom: 10px;
@@ -526,39 +637,37 @@ footer p {
 }
 
 .horizontal-list {
-    display: flex; /* Use flexbox */
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     justify-content: center;
 }
 
 .horizontal-list li {
-    margin-right: 10px; /* Space between items */
+    margin-right: 10px;
     font-size: 18px;
 }
 
-/* Optional: Remove last margin */
 .horizontal-list li:last-child {
     margin-right: 0;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 900px) {
     .horizontal-list {
-        display: grid; /* Use CSS Grid */
-        grid-template-columns: 1fr 1fr; /* Two columns */
-        gap: 10px; /* Space between items */
-        justify-items: center; /* Center items horizontally */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        justify-items: center;
     }
 
     .horizontal-list li {
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .horizontal-list li:nth-child(2n) {
-        margin-right: 0; /* Remove right margin for every second item */
+        margin-right: 0;
     }
 
     .PeerSupportMembers h3 {
@@ -612,38 +721,9 @@ footer p {
 /*Start of recruitment section*/
 /*================================================================================================*/
 
-
-/*This is the original*/
-/*.hiringInformation{*/
-/*    background-color: white;!*was ff4740 *!*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    text-align: center;*/
-/*    box-sizing: border-box;*/
-/*    align-items: center;*/
-/*    width: 100%;*/
-/*}*/
-
-/*this is original*/
-/*#hiringSalaries{*/
-/*    width: 48%;*/
-/*    box-sizing: border-box;*/
-/*    flex: 50%;*/
-/*    align-self: flex-start;*/
-/*}*/
-
-/*this is original*/
-/*#hiringVideo{*/
-/*    width: 48%;*/
-/*    box-sizing: border-box;*/
-/*    flex: 50%;*/
-/*}*/
-
-/*not original*/
 .hiringInformation {
     background-color: white;
     display: flex;
-    /*flex-direction: row; !* Horizontal layout by default *!*/
     text-align: center;
     box-sizing: border-box;
     align-items: center;
@@ -651,27 +731,22 @@ footer p {
     width: 100%;
 }
 
-/*not original*/
 #hiringVideo, #hiringSalaries {
-    width: 48%; /* Each item takes up half the space by default */
+    width: 48%;
     box-sizing: border-box;
-    flex: 1; /* Allow items to grow and shrink as needed */
+    flex: 1;
 }
 
-/*original*/
 #hiringVideo iframe{
     width: 95%;
     aspect-ratio: 1/1;
-    /*border: 0;*/
     border-radius: 5%;
 }
 
 #hiringVideo h1 {
-    /*text-decoration: underline;
-    text-decoration-skip-ink: none;*/
     border-bottom: 2px solid currentColor;
-    line-height: 1.2; /* Adjust line height to create more space */
-    padding-bottom: 4px; /* Increase padding if necessary */
+    line-height: 1.2;
+    padding-bottom: 4px;
     margin: 10px;
     color: #5C5C5C;
 }
@@ -679,14 +754,12 @@ footer p {
     color: black;
 }
 
-/*original*/
 #hiringSalaries img {
     height: 50%;
     width: 70%;
     border-radius: 5%;
 }
 
-/*original*/
 #hiringSalaries h1{
     text-align: center;
     margin-top: 20px;
@@ -695,48 +768,17 @@ footer p {
     color: #5C5C5C;
 }
 
-/*original*/
 #hiringSalaries h2{
     text-align: center;
     margin-top: 0;
     color: black;
 }
 
-/*original*/
 #lean-more-button {
     margin-bottom: 10px;
 }
 
 @media (max-width: 900px) {
-    /*original*/
-    /*.hiringInformation{*/
-    /*    flex-direction: column;*/
-    /*    align-items: center;*/
-    /*    width: 100%;*/
-    /*    margin: 0;*/
-    /*    padding: 0;*/
-    /*}*/
-    /*#hiringVideo{*/
-    /*    width: 100%;*/
-    /*    !*margin: 10px 10px 10px 10px;*!*/
-    /*}*/
-    /*#hiringVideo iframe{*/
-    /*    width: 100%;*/
-    /*    aspect-ratio: 1/1;*/
-    /*    !*border: 0;*!*/
-    /*}*/
-    /*!* original*!*/
-    /*!*#hiringSalaries img{*!*/
-    /*!*    width: 100%;*!*/
-    /*!*    height: auto;*!*/
-    /*!*    border-radius: 5%;*!*/
-    /*!*}*!*/
-    /*#hiringSalaries{*/
-    /*    width: 100%;*/
-    /*    margin: 10px auto;*/
-    /*    text-align: center;*/
-    /*}*/
-
     .hiringInformation {
         display: flex;
         flex-direction: column;
@@ -744,15 +786,15 @@ footer p {
     }
 
     #hiringVideo, #hiringSalaries {
-        width: 90%; /* Flex items take full width */
-        margin: 10px auto; /* Optional: Vertical spacing between items */
+        width: 90%;
+        margin: 10px auto;
         max-width: 100%;
     }
 
     #hiringVideo iframe, #hiringSalaries img {
-        width: 100vw; /* Ensure iframe and image take full width */
-        height: auto; /* Maintain aspect ratio for images */
-        border-radius: 5%; /* Optional: Consistent border radius */
+        width: 100vw;
+        height: auto;
+        border-radius: 5%;
         max-width: 100%;
     }
 }
@@ -770,14 +812,6 @@ footer p {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    /*background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%),*/
-    /*url('compressedPhotos/scrolls Medium.jpeg');*/
-    /*background-image: url("compressedPhotos/scrolls Medium.jpeg");*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*margin: 0;*/
 }
 
 #leadership-title {
@@ -785,36 +819,25 @@ footer p {
     position: relative;
     margin: 20px 7vw;
     text-align: center;
-    /*background-color: rgba(0, 0, 0, 0.5); !* Transparent gray background *!*/
-    /*!*color: white; !* Text color *!*!*/
-    /*padding: 20px; !* Padding inside the box *!*/
-    /*text-align: center; !* Center the text *!*/
-    /*border-radius: 10px; !* Optional: Rounded corners *!*/
-    /*display: inline-block; !* Ensures the box wraps the content tightly *!*/
-    /*!*margin-top: 20px;*!*/
-    /*margin: 20px 7vw;*/
-
-    /*margin: 2vh 5vw;*/
-
 }
 
 #leadership-title:before,
 #leadership-title:after {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Absolute positioning relative to the paragraph */
-    left: 0; /* Aligning to the far left */
-    right: 0; /* Aligning to the far right */
-    height: 2px; /* Thin line */ /* made it 0 to get rid of line for now */
-    background-color: #ff0000; /* Red color for the lines*/
-    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff0000;
+    transition: all 0.3s ease;
 }
 
 #leadership-title:before {
-    top: -10px; /*position line at top of paragraph*/
+    top: -10px;
 }
 
 #leadership-title:after {
-    bottom: -10px; /*position line at bottom of paragraph*/
+    bottom: -10px;
 }
 
 #leadership-title:hover:before,
@@ -849,11 +872,11 @@ footer p {
 
 .leadershipGallery img {
     width: 100%;
-    max-width: 150px;
-    height: 300px; /* Set a fixed height to create a zoom effect */
-    object-fit: cover; /* This will make the image cover the container */
-    object-position: center; /* Center the image within the container */
-    border-radius: 10%; /* Ensure images are not oval */
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10%;
     transition: transform .3s ease-in-out;
 }
 
