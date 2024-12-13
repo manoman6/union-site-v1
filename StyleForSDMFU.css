@@ -531,12 +531,12 @@ footer p {
     }
     #burn-camp-img {
         transform: none;
-        margin-top: -5vh;
+        margin-top: -10vh;
         margin-bottom: -5vh;
     }
     #cancer-shirt-img {
-        margin-top: -3vh;
-        margin-bottom: -3vh;
+        margin-top: -5vh;
+        margin-bottom: -1vh;
     }
 }
 
