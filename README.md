@@ -1,26 +1,19 @@
-# union-site-v1
+# South Davis Metro Fire Department's IAFF Local Union 5143 Website
+This is the official website for the Local 5143 Union, designed to provide union members with important updates, resources, and community engagement tools. The platform ensures transparency, accessibility, and ease of communication between union leadership and members. 
 
-These will be notes for the purpose of developing, and below maintaining the website (written in non-techy for prosperity)
+## Features
+* Event Announcements - Stay updated with the latest union events
+* Member Resources - Access mental health support and peer assistance programs. 
+* Photo Gallery - View images from the fire department events and daily life.
+* Leadership Contact - Easily connect with union representatives for support and inquiries.
+* Recruitment Info - Learn about Firefighter pay, benefits, and watch a video walkthrough of our combat test.
+* Union store Access - Purchase official union gear and merchandise.
 
-DEVELOPMENT
-mainscreen: cancer inititives: PFFU IAFF
+## Tech Stack
+Frontend: HTML, CSS, JavaScript
 
-//////
-Changed padding on .aboutus to 1vw
+### Contributors 
+* Emiliano Padilla - Developer and Maintainer
 
-removed from index.html:
-South Davis Metro Fire provides emergency and public services to the
-cities of Bountiful, Centerville, North Salt Lake, West Bountiful, Woods
-Cross and the unincorporated areas of South Davis County. All of these
-cities are located in the south end of Davis County which borders Salt
-Lake City. Our five fire stations are located strategically throughout
-our jurisdictional boundaries to provide all of our citizens with the
-quickest response available. Our emergency services include fire, ambulance,
-paramedic, hazardous material and technical rescue response. Our public
-services include fire prevention, public education, CERT, first aid and
-CPR classes, business inspections, fire investigations, and much more.
-We are your community fire department.
-
-
-
-MAINTENANCE
+Contact
+For support, reach out to epadburner@gmail.com or visit www.local5143.org
